@@ -57,19 +57,19 @@ for (let i = 1; i <= allSections.length; i++)
     navList.appendChild(nav_sec);
     if ( i == 1)
     {
-        nav_link.textContent = 'Section 1';
+        nav_link.textContent = 'White Tea';
     }
     else if ( i == 2)
     {
-        nav_link.textContent = 'Section 2';
+        nav_link.textContent = 'Green Tea';
     }
     else if (i == 3)
     {
-        nav_link.textContent = 'Section 3';
+        nav_link.textContent = 'Black Tea 3';
     }
     else if (i == 4)
     {
-        nav_link.textContent = 'Section 4';
+        nav_link.textContent = 'Oolong Tea';
     }
     else{
         nav_link.textContent = 'Section' + i;
@@ -82,6 +82,8 @@ felements.addEventListener('submit', function(event){
     confirm('Form Submitted Successfully');
 });
 
+const navBarElements = document.querySelectorAll('.navbar__menu');
+
 /*------------Section Highlighting--------------*/ 
 window.addEventListener('scroll', sectionHighlight)
 function sectionHighlight(){
@@ -91,9 +93,18 @@ function sectionHighlight(){
         const bottomLine = element.getBoundingClientRect().bottom;
         const windowHt = window.innerHeight *0.5;
         if(topLine < windowHt && bottomLine > windowHt){
-            return element.classList.add('your-active-class');
+            // console.log(element);
+            navBarElements[i + 2].id = 'active-sec';
+
+
+            element.classList.add('your-active-class');
         }
-        element.classList.remove('your-active-class')
+        else{
+            element.classList.remove('your-active-class')
+            navBarElements[i + 2].id = '';
+        }
+        
+        
     }
 }
 /*---------=------All Anchors----------------*/ 
