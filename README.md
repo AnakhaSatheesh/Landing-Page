@@ -6,6 +6,6 @@
 
 ## Instructions
 
-This is a landing page project which has a subscription form, section highlighting and smmoth scrolling.
+This is a landing page project which has a subscription form, section highlighting and smooth scrolling.
 It includes 4 main sections.
 This is an interactive web page.
